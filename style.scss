@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$gray : rgb(242,242,242);
+$white : white;
+$purple : #3416C6;
+$blue : #3a7999;
+$gray2 : #E0E0E0;
+$gray3 : #828282;
+$black : #000;
 body{
 	margin: 0em;
 	header{
@@ -8,26 +15,28 @@ body{
 				background-blend-mode: multiply;
 				
 				
-				.logo{
-						position: absolute;					
-						width: 93px;
-						height: 33px;
-						margin-left: 113px;
-						margin-top: 25px;
-						font-family: Open Sans;
-						font-style: normal;
-						font-weight: normal;
-						font-size: 24px;
-						line-height: 33px;
-						color: white;
-						text-decoration: none;
-						}
+
 						.block{
 							display: grid;							
-							grid-template-columns: repeat(5, 120px);
-							justify-content: center;
+							grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr;
+							justify-content: space-between;
 							border-bottom: #828282 1px solid;
 							height: 90px;
+							.logo{
+								// position: absolute;					
+								// width: 93px;
+								// height: 33px;
+								// margin-left: 113px;
+								display: grid;
+								margin-top: 25px;
+								font-family: Open Sans;
+								font-style: normal;
+								font-weight: normal;
+								font-size: 24px;
+								color: $white;
+								text-decoration: none;
+								justify-items: center;
+								}
 							.head{
 								display: grid;
 								margin-top: 35px;
@@ -38,7 +47,7 @@ body{
 								line-height: 22px;
 								width: 120px;
 								height: 22px;
-								color: white;
+								color: $white;
 								justify-items: center;
 								text-decoration: none;
 							}
@@ -55,7 +64,7 @@ body{
 							font-weight: normal;
 							font-size: 72px;
 							line-height: 98px;
-							color: #F2F2F2;
+							color: $white;
 							margin-bottom: 0em;
 						}
 						.text1{
@@ -107,13 +116,13 @@ body{
 								width: 356px;
 								margin-top: -90px;
 								align-items: center;
-								color: #fff;
+								color: $white;
 								justify-content: center;
 								text-decoration: none;
 								letter-spacing: 1px;
 								transition: all 0.3s ease-out;
 								border-radius: 15px;
-								border: 1px white solid;
+								border: 1px $white solid;
 							// .btn2:hover,
 							// .btn2:active {
 							// 		background-color: #fff;
@@ -123,8 +132,8 @@ body{
 							}
 							.btn2:hover{
 								background: rgba(0,0,0,0);
-								color: #3a7999;
-								box-shadow: inset 0 0 0 3px #3a7999;
+								color: $blue;
+								box-shadow: inset 0 0 0 3px $blue;
 					 
 	
 							}
@@ -134,6 +143,162 @@ body{
 
         }
 
-    }
+	}
+	.category{
+		display: grid;
+		justify-content: center;
+		
+		.columns{
+			display: grid;
+			grid-template-areas: 
+			"div1 div2 div3 ads"
+			"div4 div5 div6 ads"
+			;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-column-gap: 25px;
+			grid-row-gap: 25px;
+			max-width: 120%;
+			
+			#elipse{
+				display: flex;
+				background-color: $gray;
+				border-radius: 55px;
+				width: 60px;
+				height: 60px;
+				justify-content: center;
+				align-items: center;
+				margin-top: 10px;
+				
+			}
+			.purple{
+				display: grid;
+				justify-items: center;
+				max-width: 311px;
+				height: 390px;
+				left: 264px;
+				top: 1281px;
+				background: $purple;
+				border: 1px solid $purple;
+				box-sizing: border-box;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+				// img{
+				// 	position: absolute;
+				// 	margin-top: 25px;
+				// }
+				a{
+					text-decoration: none;
+					color: $white;
+				}
+				.row1{
+					font-family: Open Sans;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 20px;
+					line-height: 27px;
+					color: $gray;
+				}
+
+				.row2{
+					font-family: Op;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 12px;
+					color: $gray2;
+				}
+				.row3{
+					font-family: Open Sans;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 10px;
+					color: $gray2;
+				}
+				button{
+					background-color: $white;
+					border-radius: 5px;
+					max-width: 133px;
+
+				}
+			}
+			
+			.ads{
+				display: grid;
+				justify-content: center;
+				max-width: 311px;
+				align-items: center;
+				// height: 390px;
+				left: 264px;
+				// top: 1281px;
+				border: 1px solid $purple;
+				box-sizing: border-box;
+				// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+				grid-column: 4;
+				grid-area: ads;
+				.ad{
+					
+					transform: rotate(-90deg);
+				}
+			}
+			.temporary{
+				display: grid;
+				justify-items: center;
+				max-width: 311px;
+				// align-items: flex-start;
+				height: 390px;
+				left: 264px;
+				// top: 1281px;
+				border: 1px solid $purple;
+				box-sizing: border-box;
+				// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 15px;
+				a{
+					text-decoration: none;
+					color: $white;
+				}
+				.row1{
+					font-family: Open Sans;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 20px;
+					line-height: 27px;
+					color: $black;
+				}
+
+				.row2{
+					font-family: Open Sans;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 12px;
+					color: $gray3;
+				}
+				.row3{
+					font-family: Open Sans;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 10px;
+					color: $gray3;
+				}
+				button{
+					background-color: $white;
+					border-radius: 5px;
+					max-width: 133px;
+
+				}
+
+			}
+				
+
+
+
+		}
+		.square{
+			width: 30px;
+			height: 30px;
+			background-color: $purple;
+		}
+	}
 
 }
+
